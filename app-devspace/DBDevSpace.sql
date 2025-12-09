@@ -8,7 +8,7 @@ CREATE TABLE usuarios (
     email VARCHAR(100) UNIQUE NOT NULL, 
     password VARCHAR(255) NOT NULL,     
     github_url VARCHAR(255),            
-    nivel_experiencia VARCHAR(50),      -- Campo 5 (Nuevo: Junior, SemiSenior, Senior)
+    nivel_experiencia VARCHAR(50),      
     biografia TEXT,                     
     fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -24,7 +24,7 @@ CREATE TABLE posts (
     titulo VARCHAR(150) NOT NULL,      
     codigo TEXT NOT NULL,               
     descripcion TEXT,                 
-    tags VARCHAR(255),                  -- Campo 4 (Nuevo: ej "tutorial, bug")
+    tags VARCHAR(255),               
     visibilidad VARCHAR(20) DEFAULT 'publico', 
     usuario_id INT,                    
     lenguaje_id INT,                   
