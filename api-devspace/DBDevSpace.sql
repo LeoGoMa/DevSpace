@@ -38,6 +38,7 @@ INSERT INTO lenguajes (nombre, icono) VALUES
 ('Java', 'fab fa-java'),
 ('HTML/CSS', 'fab fa-html5');
 
+--CONSULTAS RAPIDAS
 select * from lenguajes;
 select * from usuarios;
 select * from posts;
