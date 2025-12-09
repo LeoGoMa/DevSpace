@@ -1,0 +1,55 @@
+<div class="registro-container">
+    <div class="modern-card">
+        <h3 class="page-title">Únete a DevSpace</h3>
+
+        <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+            <div class="mb-4">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" formControlName="nombre"
+                    placeholder="Tu nombre completo">
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email"
+                    placeholder="correo@ejemplo.com">
+            </div>
+
+            <div class="mb-4">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" formControlName="password"
+                    placeholder="••••••••">
+            </div>
+
+            <div class="mb-4">
+                <label for="github_url" class="form-label">GitHub URL</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-dark border-secondary text-secondary"><i
+                            class="fa-brands fa-github"></i></span>
+                    <input type="text" class="form-control" id="github_url" formControlName="github_url"
+                        placeholder="https://github.com/usuario">
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="nivel_experiencia" class="form-label">Nivel de Experiencia</label>
+                <select class="form-select" id="nivel_experiencia" formControlName="nivel_experiencia">
+                    <option value="">Selecciona tu nivel...</option>
+                    <option value="Junior">Junior</option>
+                    <option value="SemiSenior">SemiSenior</option>
+                    <option value="Senior">Senior</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="biografia" class="form-label">Biografía</label>
+                <textarea class="form-control" id="biografia" rows="3" formControlName="biografia"
+                    placeholder="Cuéntanos un poco sobre ti..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary-modern" [disabled]="registroForm.invalid">
+                <i class="fa-solid fa-user-plus me-2"></i> Registrarse
+            </button>
+        </form>
+    </div>
+</div>

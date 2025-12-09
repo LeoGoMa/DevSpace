@@ -1,0 +1,39 @@
+<div class="glass-panel profile-card">
+    <div class="profile-header">
+        <div class="profile-avatar">
+            <img *ngIf="currentUser" [src]="avatarUrl" alt="Profile" class="rounded-circle"
+                style="width: 100%; height: 100%; object-fit: cover;">
+            <i *ngIf="!currentUser" class="fa-solid fa-user-astronaut"></i>
+        </div>
+        <ng-container *ngIf="currentUser; else guestTemplate">
+            <h3 class="profile-name">{{ currentUser.nombre }}</h3>
+            <p class="profile-handle">@{{ currentUser.nombre }}</p>
+        </ng-container>
+        <ng-template #guestTemplate>
+            <h3 class="profile-name">Invitado</h3>
+            <p class="profile-handle">@usuario</p>
+        </ng-template>
+    </div>
+    <div class="profile-stats">
+        <div class="stat-item">
+            <span class="stat-value">{{ currentUser ? postCount : 0 }}</span>
+            <span class="stat-label">Posts</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value">{{ currentUser ? (currentUser.seguidores || 0) : 0 }}</span>
+            <span class="stat-label">Seguidores</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value">{{ currentUser ? (currentUser.siguiendo || 0) : 0 }}</span>
+            <span class="stat-label">Siguiendo</span>
+        </div>
+    </div>
+    <div class="profile-actions" *ngIf="!currentUser">
+        <a routerLink="/registro" class="btn btn-primary-modern w-100">Registrarse</a>
+    </div>
+    <div class="profile-actions" *ngIf="currentUser">
+        <button (click)="logout()" class="btn btn-outline-danger w-100">
+            <i class="fa-solid fa-right-from-bracket me-2"></i> Cerrar Sesión
+        </button>
+    </div>
+</div>

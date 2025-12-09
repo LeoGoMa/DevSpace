@@ -1,0 +1,24 @@
+<div class="navbar-container">
+    <nav class="navbar-modern">
+        <a class="navbar-brand" routerLink="/">
+            <span class="brand-text">DevSpace</span>
+        </a>
+
+        <button class="navbar-toggle" type="button" (click)="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" [class.active]="isMenuOpen">
+            <li>
+                <a class="nav-link" routerLink="/" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+            </li>
+            <li *ngIf="isLoggedIn">
+                <a class="nav-link" routerLink="/crear-post" routerLinkActive="active">Crear Post</a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/registro" routerLinkActive="active">Registro</a>
+            </li>
+        </ul>
+    </nav>
+</div>

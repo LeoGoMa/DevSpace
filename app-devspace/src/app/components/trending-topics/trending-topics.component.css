@@ -1,0 +1,61 @@
+.trending-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+}
+
+.trending-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.trending-item:last-child {
+    border-bottom: none;
+}
+
+.trending-item:hover {
+    transform: translateX(5px);
+}
+
+.trend-rank {
+    font-weight: 700;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    width: 20px;
+}
+
+.trend-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.trend-tag {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.trend-posts {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}

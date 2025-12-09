@@ -1,0 +1,8 @@
+/* App Component Styles */
+/* Global styles have been moved to styles.css */
+
+/* Navbar Spacing */
+app-navbar {
+  display: block;
+  margin-bottom: 1rem;
+}

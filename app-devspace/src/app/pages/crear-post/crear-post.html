@@ -1,0 +1,53 @@
+<div class="create-post-container mt-5">
+    <div class="modern-card">
+        <h3 class="page-title">Crear Nuevo Post</h3>
+
+        <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+            <div class="mb-4">
+                <label for="titulo" class="form-label">Título</label>
+                <input type="text" class="form-control" id="titulo" formControlName="titulo"
+                    placeholder="¿Sobre qué quieres compartir?">
+            </div>
+
+            <div class="mb-4">
+                <label for="lenguaje_id" class="form-label">Lenguaje</label>
+                <select class="form-select" id="lenguaje_id" formControlName="lenguaje_id">
+                    <option value="">Selecciona un lenguaje...</option>
+                    <option *ngFor="let lang of lenguajes" [value]="lang.id">{{ lang.nombre }}</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="codigo" class="form-label">Código</label>
+                <textarea class="form-control font-monospace" id="codigo" rows="6" formControlName="codigo"
+                    placeholder="// Pega tu código aquí..."></textarea>
+            </div>
+
+            <div class="mb-4">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <textarea class="form-control" id="descripcion" rows="3" formControlName="descripcion"
+                    placeholder="Explica tu código..."></textarea>
+            </div>
+
+            <div class="mb-4">
+                <label for="tags" class="form-label">Tags</label>
+                <input type="text" class="form-control" id="tags" formControlName="tags"
+                    placeholder="ej: tutorial, bug, tip">
+            </div>
+
+            <div class="mb-4">
+                <label for="visibilidad" class="form-label">Visibilidad</label>
+                <select class="form-select" id="visibilidad" formControlName="visibilidad">
+                    <option value="publico">Público</option>
+                    <option value="privado">Privado</option>
+                </select>
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn-primary-modern" [disabled]="postForm.invalid">
+                    <i class="fa-solid fa-paper-plane me-2"></i> Publicar Post
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

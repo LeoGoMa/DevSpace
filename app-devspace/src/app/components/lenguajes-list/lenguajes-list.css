@@ -1,0 +1,54 @@
+.modern-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.card-header {
+    background: var(--gradient-primary);
+    padding: 1rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.list-group-item {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.list-group-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    padding-left: 1.25rem;
+}
+
+.list-group-item i {
+    width: 24px;
+    text-align: center;
+    margin-right: 0.5rem;
+    color: var(--accent-primary);
+}
+
+.badge {
+    background: var(--bg-secondary);
+    color: var(--accent-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+}
